@@ -17,20 +17,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('about',function()
-{
+Route::get('about', function () {
     return view('about_us');
 })->name('about');
-Route::get('/welcome',function()
-{
+Route::get('/welcome', function () {
     return view('firstpage');
 });
-Route::get('star',function()
-{
+Route::get('star', function () {
     return view('bubbes');
 });
-Route::get('classwork',[classwork::class,'work']);
-Route::view('/second','secondPage');
-Route::view('/download','download');
-Route::view('description','description');
-?>
+Route::get('classwork', [classwork::class, 'work']);
+Route::view('/second', 'secondPage');
+Route::view('/download', 'download');
+Route::view('description', 'description');
+Route::view('not_signed_up', 'wrongSiginMessage');
+Route::view('login', "login");
+Route::view('demo','demo');
+Route::view('/navigation',"navigation");

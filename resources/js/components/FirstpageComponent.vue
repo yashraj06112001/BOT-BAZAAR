@@ -10,13 +10,32 @@
     </div>
     <div id="question">
         <p style="color:white;">Do you want the bot?</p>
-        <form>
-            <input type="submit" style="color:green; font-size:50px; position: relative; left:100px;" value="YES" >
-            <input type="submit" value="NO" style="color:red; left:270px; position: relative; font-size:50px;">
+        <form> 
+            <button style="color:green; font-size:50px; position: relative; left:100px;" v-on:click.prevent="pressyes">Yes</button>
+            
+            <button style="color:red; left:270px; position: relative; font-size:50px;">No</button>
         </form>
     </div> 
 </div>
+
 </template>
+<script>
+import axios from 'axios'
+export default{
+    methods:{
+        pressyes:async function()
+        {
+            var result=await axios.post('http://127.0.0.1:8000/api/yespage').then(response => {
+        if(response.data.success)
+        {
+            window.location.href = '/second';
+        }
+      });
+        }
+    }
+}
+</script>
+
 <style scoped>
 #vid{
     z-index:-1;

@@ -1,7 +1,5 @@
 <template>
     <div>
-       
-        
     <form>
         <div class="form-heading">
             <p>SIGN UP</p>

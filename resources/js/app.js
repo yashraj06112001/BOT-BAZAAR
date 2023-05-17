@@ -27,6 +27,7 @@ Vue.component('entryform-component',require('./components/EntryformComponent.vue
 Vue.component('firstpage-component',require('./components/FirstpageComponent.vue').default);
 Vue.component('download-component',require('./components/DownloadComponent.vue').default);
 Vue.component('description-component',require('./components/DescriptionComponent.vue').default);
+Vue.component('signin-component',require('./components/SigninComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
